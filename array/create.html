@@ -5,9 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Array Create</title>
-  <source src="./crete.js" type="javascript">
+  <script src="./create.js" type="text/javascript" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
 </head>
 <body>
-  
+  <div class="container-fluid">
+    <div class="border border-success my-3 py-2 px-2">
+      <h3>OutPut</h3>
+      <div id="output"></div>
+    </div>
+    <h1>Array</h1>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h3>Number String Mix</h3>
+      <button class="btn btn-outline-primary" id="arrLiteralBtn">Number String Mix</button>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="arrayLiteral" id="arrLiteNumber" value="option1">
+        <label class="form-check-label" for="arrLiteNumber">number</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="arrayLiteral" id="arrLiteString" value="option2">
+        <label class="form-check-label" for="arrLiteString">string</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="arrayLiteral" id="arrLiteMix" value="option3">
+        <label class="form-check-label" for="arrLiteMix">mix</label>
+      </div>
+    </div>
+    <div class="border border-primary my-3 px-2 py-2">
+      <h3>base StepUp</h3>
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-primary" type="button" id="stepUpBtn">Step Up</button>
+        <input type="number" id="stepUpInput" class="form-control" placeholder="ex)1234" aria-label="Example text with button addon" aria-describedby="stepUpBtn">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
