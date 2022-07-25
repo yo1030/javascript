@@ -59,10 +59,13 @@ function stepUp(event) {
   outputValue(outputArr);
 }
 function spreadFunc() {
-  const tempArr = [1,false,2,true,3];
+  const tempArr = [ 1, false, 2, true, 3];
   const spreadArr = ['first', ...tempArr, 'finish'];
+  let copy = [...spreadArr];
+  copy[0] = 'copy';
   clearOutput();
   outputValue(spreadArr);
+  outputValue(copy);
 }
 arrLiteBtn.addEventListener('click', arrayLiteral);
 stepUpBtn.addEventListener('click', stepUp);
