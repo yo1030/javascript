@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Function</title>
+  <script src="./function.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="border border-success my-3 py-2 px-2">
+      <h3>OutPut</h3>
+      <div id="output"></div>
+    </div>
+    <div class="border border-info my-3 py-2 px-2">
+      <div id="sampleArea">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sampleArr" id="numArr" value="1">
+          <label class="form-check-label sampleValue" for="numArr">[1,2,3,4,5]</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sampleArr" id="numArrEmpty" value="2">
+          <label class="form-check-label sampleValue" for="numArrEmpty">[1,2,,4,5]</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sampleArr" id="stringArr" value="3" disabled>
+          <label class="form-check-label sampleValue" for="stringArr">["a", "b", "c", "d", "e"]</label>
+        </div>
+      </div>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>forEach</h1>
+      <button id="forEachBtn">forEach</button>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>map</h1>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>filter</h1>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>find / findIndex</h1>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>every / some</h1>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>reduce / reduceRight</h1>
+    </div>
+    <div class="border border-primary my-3 py-2 px-2">
+      <h1>flat / flatMap</h1>
+    </div>
+  </div>
+</body>
+</html>
