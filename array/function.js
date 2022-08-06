@@ -6,26 +6,44 @@ const forEachBtn = document.getElementById('forEachBtn');
 const mapBtn = document.getElementById('mapBtn');
 let sum = 0;
 
-const sampleArrForEach = (()=>{
+const sampleArrForEach = (() => {
   sampleArr.forEach((element, i) => {
     if (!element.checked) return;
     switch (element.id) {
       case "numArr":
-        outputLogPlus(numArr);
+        outputLogPlusForEach(numArr);
         break;
       case "numArrEmpty":
-        outputLogPlus(numArrEmpty);
+        outputLogPlusForEach(numArrEmpty);
         break;
       case "stringArr":
-        outputLogPlus(stringArr);
+        outputLogPlusForEach(stringArr);
         break;
       default:
         break;
     }
   });
 });
+const sampleArrMap = (() => {
+  sampleArr.forEach((element) => {
+    if (!element.checked) return;
+    switch (element.id) {
+      case "numArr":
+        outputLogPlusMap(numArr);
+        break;
+      case "numArrEmpty":
+        outputLogPlusMap(numArrEmpty);
+        break;
+      case "stringArr":
+        outputLogPlusMap(stringArr);
+        break;
+      default:
+        break;
+    }
+  });
+})
 
-const outputLogPlus = (arr => {
+const outputLogPlusForEach = (arr => {
   const copyArr = [...arr];
   console.log(copyArr);
   console.log(sum);
@@ -34,13 +52,23 @@ const outputLogPlus = (arr => {
     console.log(`i:${i} / copyArrElem:${copyArrElem} / arr_[${i}]:${arr_[i]}`);
     sum++;
   })
-  // copyArr.forEach(function (copyArrElem, i, arr_) {
-  //   arr_[i] = copyArrElem + 1;
-  //   console.log(`i:${i} / copyArrElem:${copyArrElem} / arr_[${i}]:${arr_[i]}`);
-  //   sum++;
-  // })
   console.log(copyArr);
   console.log(sum);
   sum = 0;
 })
-forEachBtn.addEventListener('click', sampleArrForEach)
+const outputLogPlusMap = (arr => {
+  const copyArr = [...arr];
+  let tempElem = null;
+  const newArr = copyArr.map((copyArrElem) => {
+    tempElem = copyArrElem + 1;
+    console.log(`copyArrElem:${copyArrElem} / tempElem:${tempElem}`);
+    sum++;
+    return tempElem;
+  })
+  console.log(copyArr);
+  console.log(newArr);
+  console.log(sum);
+  sum = 0;
+})
+forEachBtn.addEventListener('click', sampleArrForEach);
+mapBtn.addEventListener('click', sampleArrMap);
