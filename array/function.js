@@ -194,6 +194,8 @@ const flatLog = (() => {
   console.log(arr.flat(3));
   console.log(arr.flat(4));
 });
+// map() -> flat(),
+// map の結果が空の配列のとき、flat() により何も出力されない
 const flatMapLog = (() => {
   const arr = [1, [2, [3, [4, 5]]]];
   console.log(arr);
