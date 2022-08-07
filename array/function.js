@@ -10,7 +10,9 @@ const findIdxBtn = document.getElementById('findIdxBtn');
 const everyBtn = document.getElementById('everyBtn');
 const someBtn = document.getElementById('someBtn');
 const reduceBtn = document.getElementById('reduceBtn');
+const reduceRightBtn = document.getElementById('reduceRightBtn');
 const flatBtn = document.getElementById('flatBtn');
+const flatMapBtn = document.getElementById('flatMapBtn');
 let sum = 0;
 
 const makeArr = (num => {
@@ -26,7 +28,7 @@ const makeArrSkip = (num => {
     arr[i] = (i === 3 ? '': i);
   }
   return arr;
-})
+});
 const sampleArrForEach = (() => {
   sampleArr.forEach((element, i) => {
     if (!element.checked) return;
@@ -63,7 +65,6 @@ const sampleArrMap = (() => {
     }
   });
 });
-
 const outputLogPlusForEach = (arr => {
   const copyArr = [...arr];
   console.log(copyArr);
@@ -137,7 +138,7 @@ const everyLog = (() => {
   console.log(result1);
   console.log(result2);
   console.log(result3);
-})
+});
 const someLog = (() => {
   const arr1 = makeArr(5);
   const arr2 = makeArr(10);
@@ -154,7 +155,41 @@ const someLog = (() => {
   console.log(result3);
   console.log(result4);
   console.log(result5);
-})
+});
+const reduceLog = (() => {
+  const arr10 = makeArr(10);
+  const arr5 = makeArr(5);
+  const result1 = arr10.reduce((a,b) => a + b);
+  const result2 = arr10.reduce((a,b) => a * b);
+  arr5.reduce((x, y) => outputLog(x,y));
+  arr5.reduce((x, y) => outputLog(x,y),10);
+  console.log(result1);
+  console.log(result2);
+  function outputLog(x, y) {
+    console.log(`x:${x}/ y:${y}`);
+    return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
+  }
+});
+const reduceRightLog = (() => {
+  const arr10 = makeArr(10);
+  const arr5 = makeArr(5);
+  const result1 = arr10.reduceRight((a,b) => a + b);
+  const result2 = arr10.reduceRight((a,b) => a * b);
+  arr5.reduceRight((x, y) => outputLog(x,y));
+  arr5.reduceRight((x, y) => outputLog(x,y),　10);
+  console.log(result1);
+  console.log(result2);
+  function outputLog(x, y) {
+    console.log(`x:${x}/ y:${y}`);
+    return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
+  }
+});
+const flatLog = (() => {
+
+});
+const flatMapLog = (() => {
+
+});
 forEachBtn.addEventListener('click', sampleArrForEach);
 mapBtn.addEventListener('click', sampleArrMap);
 filterBtn.addEventListener('click', filterLog);
@@ -162,3 +197,7 @@ findBtn.addEventListener('click', findLog);
 findIdxBtn.addEventListener('click', findIdxLog);
 everyBtn.addEventListener('click', everyLog);
 someBtn.addEventListener('click', someLog);
+reduceBtn.addEventListener('click', reduceLog);
+reduceRightBtn.addEventListener('click', reduceRightLog);
+flatBtn.addEventListener('click', flatLog);
+flatMapBtn.addEventListener('click', flatMapLog);
