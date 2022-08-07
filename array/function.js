@@ -16,10 +16,17 @@ let sum = 0;
 const makeArr = (num => {
   let arr = [];
   for (let i = 1; i <= num; i++) {
-    arr[i] = i;    
+    arr[i] = i;
   }
-  return arr; 
+  return arr;
 });
+const makeArrSkip = (num => {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+    arr[i] = (i === 3 ? '': i);
+  }
+  return arr;
+})
 const sampleArrForEach = (() => {
   sampleArr.forEach((element, i) => {
     if (!element.checked) return;
@@ -120,10 +127,33 @@ const findIdxLog = (() => {
   console.log(result4);
 });
 const everyLog = (() => {
-  console.log('every');
+  const arr1 = makeArr(5);
+  const arr2 = makeArr(10);
+  const arr3 = makeArrSkip(5);
+  const result1 = arr1.every(x => x < 7);
+  const result2 = arr2.every(x => x < 7);
+  const result3 = arr3.every(x => x < 7);
+  console.log(arr3);
+  console.log(result1);
+  console.log(result2);
+  console.log(result3);
 })
 const someLog = (() => {
-  console.log('some');
+  const arr1 = makeArr(5);
+  const arr2 = makeArr(10);
+  const arr3 = ["a","b","c","d","e","f","g","h","i","j"];
+  const arr4 = makeArrSkip(10);
+  const result1 = arr1.some(x => x > 7);
+  const result2 = arr2.some(x => x > 7);
+  const result3 = arr2.some(isNaN);
+  const result4 = arr3.some(isNaN);
+  const result5 = arr4.some(x => x === '');
+  console.log(arr4);
+  console.log(result1);
+  console.log(result2);
+  console.log(result3);
+  console.log(result4);
+  console.log(result5);
 })
 forEachBtn.addEventListener('click', sampleArrForEach);
 mapBtn.addEventListener('click', sampleArrMap);
