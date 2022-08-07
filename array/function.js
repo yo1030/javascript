@@ -185,10 +185,19 @@ const reduceRightLog = (() => {
   }
 });
 const flatLog = (() => {
-
+  const arr = [1, [2, [3, [4, 5]]]];
+  console.log(arr);
+  console.log(arr.flat());
+  console.log(arr.flat(0));
+  console.log(arr.flat(1));
+  console.log(arr.flat(2));
+  console.log(arr.flat(3));
+  console.log(arr.flat(4));
 });
 const flatMapLog = (() => {
-
+  const arr = [1, [2, [3, [4, 5]]]];
+  console.log(arr);
+  console.log(arr.flatMap(x => x));
 });
 forEachBtn.addEventListener('click', sampleArrForEach);
 mapBtn.addEventListener('click', sampleArrMap);
