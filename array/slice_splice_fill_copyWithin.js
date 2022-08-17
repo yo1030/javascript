@@ -82,6 +82,8 @@ const fillLog = (() => {
 //    a : コピーした要素を配列のどの要素に置き換えるか指定
 //    b : 配列のどの要素からコピーを行うか
 //    c : 配列のコピーをどこまで行うか指定
+// 高速なメソッド。型付き配列に使うと便利。
+// C標準ライブラリの memmove() をもとにしている
 const copyWithinLog = (() => {
   const arr = makeArr(10);
   let arr1 = makeArr(10);
