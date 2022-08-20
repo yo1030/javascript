@@ -10,23 +10,18 @@ const makeArr = (num => {
   }
   return arr;
 });
-// 呼び出し元の配列の値は変わらない
-// slice(a,b) => a~(b-1)の要素を取得(b自身は含まない)
-// 最初の要素は 0 で指定する
-// 第二引数を省略：以降の要素全てを取得(第一引数を省略するとsyntaxエラー)
-// 負の数で指定された場合、後ろから考える
-// 一番後ろの値は -1 で指定する。後ろから2番目は -2
+/** https://honobonoengineer.com/array-prototye-slice/ */
 const sliceLog = (() => {
   const arr = makeArr(10);
-  console.log(`作成した配列：${arr}`);
   const result1 = arr.slice(0, 5);
-  const result2 = arr.slice(5);
-  const result3 = arr.slice( 2,-3);
-  const result4 = arr.slice(-6, -1);
-  console.log(`引数2つ：${result1}`);
-  console.log(`引数1つ：${result2}`);
-  console.log(`引数2つ片方負：${result3}`);
-  console.log(`引数2つ両方負：${result4}`);
+  // const result2 = arr.slice(5);
+  // const result3 = arr.slice( 2,-3);
+  // const result4 = arr.slice(-6, -1);
+  console.log(`作成した配列：${arr}`);
+  console.log(`result：${result1}`);
+  // console.log(`引数1つ：${result2}`);
+  // console.log(`引数2つ片方負：${result3}`);
+  // console.log(`引数2つ両方負：${result4}`);
   console.log(`arr：${arr}`);
 });
 // 呼び出し元の配列を変更する
