@@ -14,26 +14,17 @@ const makeArr = (num => {
 const sliceLog = (() => {
   const arr = makeArr(10);
   const result1 = arr.slice(0, 5);
-  // const result2 = arr.slice(5);
-  // const result3 = arr.slice( 2,-3);
-  // const result4 = arr.slice(-6, -1);
+  const result2 = arr.slice(5);
+  const result3 = arr.slice( 2,-3);
+  const result4 = arr.slice(-6, -1);
   console.log(`作成した配列：${arr}`);
   console.log(`result：${result1}`);
-  // console.log(`引数1つ：${result2}`);
-  // console.log(`引数2つ片方負：${result3}`);
-  // console.log(`引数2つ両方負：${result4}`);
+  console.log(`引数1つ：${result2}`);
+  console.log(`引数2つ片方負：${result3}`);
+  console.log(`引数2つ両方負：${result4}`);
   console.log(`arr：${arr}`);
 });
-// 呼び出し元の配列を変更する
-// 挿入と削除を同時に実行できる（別々に行うこともできる）
-// 配列のインデックス値は動的に変更する
-// splice(a,b,c...) a -> 挿入や削除を開始する位置
-//                       b -> 削除する要素の個数
-//                       c -> a で指定された位置に挿入する要素
-//  c に配列が渡されたとき、新たに作成される配列には展開されずに渡される
-//      関数に残余引数として渡した場合は扱いが異なる？
-//      (3)と(4)で配列を渡しているが、(3)は展開されて、(4)は展開されない
-// 返り値は削除した（取り除いた）要素
+/** https://honobonoengineer.com/array-prototye-splice/ */
 const spliceLog = (() => {
   outputSplice(10, 4);                      // (1)
   outputSplice(10, 4, 2);                  // (2)
@@ -41,10 +32,12 @@ const spliceLog = (() => {
   const arr = makeArr(10);
   const strArr = ["a","b","c"];
   const result = arr.splice(2,3,strArr);
+  console.log('-----------function--------splice-------------------');
   console.log(result);
   console.log(arr);                          // (4)
   function outputSplice(arrNum, startIdx, length, ...arg) {
     const arr = makeArr(arrNum);
+    console.log('-----------function-------outputSplice-------------------');
     console.log(`作成した配列：${arr}`);
     if ((arg.length !== 0) &&
         (length !== undefined)) {
