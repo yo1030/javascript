@@ -5,17 +5,7 @@ const sortBtn = document.getElementById('sortBtn');
 const reverseBtn = document.getElementById('reverseBtn');
 
 /** indexOf, lastIndexOf, includes は文字列にも使えるメソッド */
-/**
- * 配列の先頭から探す
- * 見つかったらインデックスを返す（最初に見つかったものだけ）
- * 見つからなかったら -1 を返す
- * 第二引数を使うと配列内の検索を始める箇所を指定できる
- * （indexOfは先頭, lastIndexOf の場合は末尾スタート）
- * 負の数を指定した場合、末尾からのオフセットで指定される
- * "==="演算子と同じアルゴリズムで同じかどうかを判断する
- * NaN 値は「すべての値と異なる（NaN値を含める）」と判定される
- * 配列中の NaN 値を調べることができない
- */
+/** https://honobonoengineer.com/array-indexof-lastindexof/ */
 const idxOfLog = (() => {
   const arr = makeArr(5);
   const arr_ = arr.concat(makeArr(5).reverse());
@@ -27,15 +17,15 @@ const idxOfLog = (() => {
   console.log(`indexOfの結果2：${result2}`);
   console.log(`indexOfの結果3：${result3}：${arr_[result3]}`);
 });
-/** 配列の末尾から探す（他は indexOf と同じ） */
+/** https://honobonoengineer.com/array-indexof-lastindexof/ */
 const lastIdxOfLog = (() => {
   const arr = makeArr(5);
   const arr_ = arr.concat(makeArr(5).reverse());
   const result1 = arr_.lastIndexOf(3);
   const result2 = arr_.lastIndexOf("a");
   console.log(`作成した配列：${arr_}`);
-  console.log(`indexOfの結果1：${result1}：${arr_[result1]}`);
-  console.log(`indexOfの結果2：${result2}`);
+  console.log(`lastIndexOfの結果1：${result1}：${arr_[result1]}`);
+  console.log(`lastIndexOfの結果2：${result2}`);
 });
 /**
  * ES2016から追加された

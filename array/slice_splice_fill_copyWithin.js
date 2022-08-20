@@ -65,25 +65,22 @@ const fillLog = (() => {
   console.log(`fillの返り値：${result}`);
   console.log(`元の配列：${arr}`);
 });
-//  copyWithin(a,b,c) 呼び出し元の配列を変更する
-//                            変更した配列を返す
-//    a : コピーした要素を配列のどの要素に置き換えるか指定
-//    b : 配列のどの要素からコピーを行うか
-//    c : 配列のコピーをどこまで行うか指定
-// 高速なメソッド。型付き配列に使うと便利。
-// C標準ライブラリの memmove() をもとにしている
+//  https://honobonoengineer.com/array-prototye-copywithin/
 const copyWithinLog = (() => {
   const arr = makeArr(10);
   let arr1 = makeArr(10);
   let arr2 = makeArr(10);
   let arr3 = makeArr(10);
+  let arr4 = makeArr(10);
   console.log(`作成した配列：${arr}`);
   arr1.copyWithin(2);
-  console.log(`copyWithinの戻り値1：${arr1}`);
+  console.log(`arr1：${arr1}`);
   arr2.copyWithin(2, 4);
-  console.log(`copyWithinの戻り値2：${arr2}`);
+  console.log(`arr2：${arr2}`);
   arr3.copyWithin(2, 4, -3);
-  console.log(`copyWithinの戻り値2：${arr3}`);
+  console.log(`arr3：${arr3}`);
+  arr4.copyWithin(2, 1);
+  console.log(`arr4：${arr4}`);
 });
 
 sliceBtn.addEventListener('click', sliceLog);
