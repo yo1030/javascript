@@ -92,6 +92,7 @@ const outputLogPlusMap = (arr => {
   console.log(sum);
   sum = 0;
 });
+/** https://honobonoengineer.com/array-method-filter/ */
 const filterLog = (() => {
   const mixArr = [1,2,"a", true, false, null, undefined];
   const result1 = numArr.filter(x => x < 3);
