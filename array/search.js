@@ -40,48 +40,29 @@ const lastIdxOfLog = (() => {
 const includesLog = (() => {
 
 });
-/**
- * 既存の配列をソートし、ソートした配列を返す
- * 元の配列を変更する（新しく配列を作成しない）
- * null と undefined では null, undefinend の順に出力される
- * default はアルファベット順
- * 任意に並べ替えたい時は引数に比較関数（引数が２つ）を使う
- *  function(a,b) で
- *    a, b の順に表示したい時、返り値を0より小さな値にする
- *    b, a の順に表示したい時、返り値を0より大きな値にする
- *    順序関係がない（２つの値が同じ）とき、0を返す
- * 比較関数で並び替えを行うとき、各要素の大小関係を比較しているっぽい
- * 大文字・小文字を区別せず並び替えたい時比較関数内で並び替えを行う
- *  defaultでは大文字→小文字の順
- */
+/** https://honobonoengineer.com/array-sort/ */
 const sortLog = (() => {
-  // let arr1 = ["c","d","a","b","e"];
-  // let arr2 = [undefined,"c","a","b","d",undefined];
-  // let arr3 = [null,"c","b","a","d",null];
-  // let arr4 = [null,undefined,"c","b","a",null,undefined];
-  // arr1.sort();
-  // arr2.sort();
-  // arr3.sort();
-  // arr4.sort();
-  // console.log(arr1);
-  // console.log(arr2);
-  // console.log(arr3);
-  // console.log(arr4);
+  let arr1 = ["c","d","a","b","e"];
+  let arr2 = [undefined,"c","a","b","d",undefined];
+  let arr3 = [null,"c","b","a","d",null];
+  let arr4 = [null,undefined,"c","b","a",null,undefined];
+  arr1.sort();
+  arr2.sort();
+  arr3.sort();
+  arr4.sort();
+  console.log(arr1);
+  console.log(arr2);
+  console.log(arr3);
+  console.log(arr4);
   let num1 = [3, 4, 7, 2,1,8,9,6];
   let num2 = [3, 2, 1, 4];
   let num3 = [3, 4, 7, 2,1,8,9,6];
   console.log(num1);
-  num1.sort((a,b) => {
-    console.log(`a:${a},b:${b},a-b:${a-b}`);
-    return a-b;
-  });
+  num1.sort((a,b) =>  a-b);
   num2.sort((a,b) => b-a);
   console.log(num1);
   console.log(num2);
-  num3.sort((a,b) => {
-    console.log(`a:${a},b:${b}`);
-    return -1;
-  });
+  num3.sort((a,b) =>  b-a);
   console.log(num3);
   let Arr1 = ["C","d","A","b","E"];
   let Arr2 = ["C","d","A","b","E"];
