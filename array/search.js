@@ -86,11 +86,7 @@ const sortLog = (() => {
   console.log(Arr2);
   console.log(Arr3);
 });
-/**
- * 配列の要素の順序を逆にする
- * 新しい配列を作成しない
- * 既存の配列に並び替える
- */
+/** https://honobonoengineer.com/array-reverse/ */
 const reverseLog = (() => {
   let arr = makeArr(10);
   let arr1 = makeArr(10);
