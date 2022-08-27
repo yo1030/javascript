@@ -104,6 +104,7 @@ const filterLog = (() => {
   console.log(result3);
   console.log(result4);
 });
+/** https://honobonoengineer.com/array-find-findindex/ */
 const findLog = (() => {
   const arr = makeArr(20);
   console.log(arr);
@@ -116,6 +117,7 @@ const findLog = (() => {
   console.log(result3);
   console.log(result4);
 });
+/** https://honobonoengineer.com/array-find-findindex/ */
 const findIdxLog = (() => {
   const arr = makeArr(20);
   console.log(arr);
