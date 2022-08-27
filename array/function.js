@@ -130,6 +130,7 @@ const findIdxLog = (() => {
   console.log(result3);
   console.log(result4);
 });
+/** https://honobonoengineer.com/js-every-some/ */
 const everyLog = (() => {
   const arr1 = makeArr(5);
   const arr2 = makeArr(10);
@@ -142,6 +143,7 @@ const everyLog = (() => {
   console.log(result2);
   console.log(result3);
 });
+/** https://honobonoengineer.com/js-every-some/ */
 const someLog = (() => {
   const arr1 = makeArr(5);
   const arr2 = makeArr(10);
