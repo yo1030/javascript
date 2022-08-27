@@ -161,6 +161,7 @@ const someLog = (() => {
   console.log(result4);
   console.log(result5);
 });
+/** https://honobonoengineer.com/js-reduce-reduceright/ */
 const reduceLog = (() => {
   const arr10 = makeArr(10);
   const arr5 = makeArr(5);
@@ -175,6 +176,7 @@ const reduceLog = (() => {
     return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
   }
 });
+/** https://honobonoengineer.com/js-reduce-reduceright/ */
 const reduceRightLog = (() => {
   const arr10 = makeArr(10);
   const arr5 = makeArr(5);
