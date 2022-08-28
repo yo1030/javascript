@@ -12,8 +12,7 @@ function getRandomInt(max) {
 var stack = [];
 var stack1 = [];
 var stack2 = [];
-// push をすると元の配列に値が追加される（新しい配列は作成されない）
-// 後ろから追加される
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const pushNum = ((num) => {
   stack.push(num);
 });
@@ -34,24 +33,23 @@ const pushLog = (() => {
   pushNum(randumInt);
   console.log(stack);
 });
-// push の引数に配列を指定すると配列のまま追加される（展開されない）
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const pushArrLog = (() => {
   pushArr();
   console.log(stack);
 });
-// pop すると取り除かれた値が返される
-// 新しく配列が作成されず、元の配列が変更される
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const popLog = (() => {
   console.log(stack.pop());
   console.log(stack);
 });
-// 配列の先頭から値が追加される
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const unshiftLog = (() => {
   const randumInt = getRandomInt(9);
   unshiftNum(randumInt);
   console.log(stack1);
 });
-// 引数に複数の値を指定すると順番ずつ追加される
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const unshiftLog2 = (() => {
   const randumInt = getRandomInt(9);
   const randumInt2 = getRandomInt(9);
@@ -59,7 +57,7 @@ const unshiftLog2 = (() => {
   unshiftTwoNum(randumInt, randumInt2);
   console.log(stack1);
 });
-// 配列の先頭から値が取り除かれる
+/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const shiftLog = (() => {
   console.log(stack1.shift());
   console.log(stack1);
