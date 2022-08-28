@@ -191,8 +191,15 @@ const reduceRightLog = (() => {
     return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
   }
 });
+/** https://honobonoengineer.com/js-flat-flatmap/ */
 const flatLog = (() => {
-  const arr = [1, [2, [3, [4, 5]]]];
+  const arr = [ 1,
+                    [ 2,
+                      [ 3,
+                        [ 4, 5]
+                      ]
+                    ]
+                  ];
   console.log(arr);
   console.log(arr.flat());
   console.log(arr.flat(0));
@@ -201,8 +208,7 @@ const flatLog = (() => {
   console.log(arr.flat(3));
   console.log(arr.flat(4));
 });
-// map() -> flat(),
-// map の結果が空の配列のとき、flat() により何も出力されない
+/** https://honobonoengineer.com/js-flat-flatmap/ */
 const flatMapLog = (() => {
   const arr = [1, [2, [3, [4, 5]]]];
   console.log(arr);
