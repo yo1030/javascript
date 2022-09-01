@@ -27,18 +27,23 @@ const lastIdxOfLog = (() => {
   console.log(`lastIndexOfの結果1：${result1}：${arr_[result1]}`);
   console.log(`lastIndexOfの結果2：${result2}`);
 });
-/**
- * ES2016から追加された
- * 含まれている場合→true, 含まれていない場合→false
- * インデックスについては返さない
- * セットで行うようなメンバーシップテストを配列に対して行うメソッド
- * 配列はセットの効率的な表現ではないため
- * 多くの要素に対して行いたいときは Set オブジェクトを使う方がいい
- * NaN 同士は等しいと判定される
- * 配列中の NaN 値を調べれる
- */
+/**　https://honobonoengineer.com/js-array-includes/ */
 const includesLog = (() => {
+  let arr = makeArr(5);
 
+  let result = arr.includes(3);
+  console.log(result);
+
+  result = arr.includes("3");
+  console.log(result);
+
+  arr.push(NaN);
+  result = arr.includes(NaN);
+  console.log(result);
+
+  arr.push(null);
+  result = arr.includes(undefined);
+  console.log(result);
 });
 /** https://honobonoengineer.com/array-sort/ */
 const sortLog = (() => {
