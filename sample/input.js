@@ -1,5 +1,5 @@
 const clipBoardIpt = document.getElementById('clipBoardIpt');
-
+/** https://honobonoengineer.com/js-clipboard-copy-cut-paste/ */
 function cutEvent(e) {
   e.preventDefault();
   console.log(e);
