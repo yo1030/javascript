@@ -1,5 +1,7 @@
 const dragBox = document.getElementById('drag1');
-/** https://honobonoengineer.com/js-mouse-drag/ */
+/** https://honobonoengineer.com/js-mouse-drag/
+ *   https://honobonoengineer.com/js-elementfrompoint-pointer/
+ */
 function dragStart(e) {
   e.preventDefault();
   const target = e.currentTarget;
