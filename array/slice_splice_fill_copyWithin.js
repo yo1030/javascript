@@ -10,7 +10,6 @@ const makeArr = (num => {
   }
   return arr;
 });
-/** https://honobonoengineer.com/array-prototye-slice/ */
 const sliceLog = (() => {
   const arr = makeArr(10);
   const result1 = arr.slice(0, 5);
@@ -24,7 +23,6 @@ const sliceLog = (() => {
   console.log(`引数2つ両方負：${result4}`);
   console.log(`arr：${arr}`);
 });
-/** https://honobonoengineer.com/array-prototye-splice/ */
 const spliceLog = (() => {
   outputSplice(10, 4);                      // (1)
   outputSplice(10, 4, 2);                  // (2)
@@ -65,7 +63,6 @@ const fillLog = (() => {
   console.log(`fillの返り値：${result}`);
   console.log(`元の配列：${arr}`);
 });
-//  https://honobonoengineer.com/array-prototye-copywithin/
 const copyWithinLog = (() => {
   const arr = makeArr(10);
   let arr1 = makeArr(10);

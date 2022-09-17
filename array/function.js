@@ -92,7 +92,6 @@ const outputLogPlusMap = (arr => {
   console.log(sum);
   sum = 0;
 });
-/** https://honobonoengineer.com/array-method-filter/ */
 const filterLog = (() => {
   const mixArr = [1,2,"a", true, false, null, undefined];
   const result1 = numArr.filter(x => x < 3);
@@ -104,7 +103,6 @@ const filterLog = (() => {
   console.log(result3);
   console.log(result4);
 });
-/** https://honobonoengineer.com/array-find-findindex/ */
 const findLog = (() => {
   const arr = makeArr(20);
   console.log(arr);
@@ -117,7 +115,6 @@ const findLog = (() => {
   console.log(result3);
   console.log(result4);
 });
-/** https://honobonoengineer.com/array-find-findindex/ */
 const findIdxLog = (() => {
   const arr = makeArr(20);
   console.log(arr);
@@ -130,7 +127,6 @@ const findIdxLog = (() => {
   console.log(result3);
   console.log(result4);
 });
-/** https://honobonoengineer.com/js-every-some/ */
 const everyLog = (() => {
   const arr1 = makeArr(5);
   const arr2 = makeArr(10);
@@ -143,7 +139,6 @@ const everyLog = (() => {
   console.log(result2);
   console.log(result3);
 });
-/** https://honobonoengineer.com/js-every-some/ */
 const someLog = (() => {
   const arr1 = makeArr(5);
   const arr2 = makeArr(10);
@@ -161,7 +156,6 @@ const someLog = (() => {
   console.log(result4);
   console.log(result5);
 });
-/** https://honobonoengineer.com/js-reduce-reduceright/ */
 const reduceLog = (() => {
   const arr10 = makeArr(10);
   const arr5 = makeArr(5);
@@ -176,7 +170,6 @@ const reduceLog = (() => {
     return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
   }
 });
-/** https://honobonoengineer.com/js-reduce-reduceright/ */
 const reduceRightLog = (() => {
   const arr10 = makeArr(10);
   const arr5 = makeArr(5);
@@ -191,7 +184,6 @@ const reduceRightLog = (() => {
     return y;   // 返り値を指定しないと x に undefined が入る(初期値は別)
   }
 });
-/** https://honobonoengineer.com/js-flat-flatmap/ */
 const flatLog = (() => {
   const arr = [ 1,
                     [ 2,
@@ -208,7 +200,6 @@ const flatLog = (() => {
   console.log(arr.flat(3));
   console.log(arr.flat(4));
 });
-/** https://honobonoengineer.com/js-flat-flatmap/ */
 const flatMapLog = (() => {
   const arr = [1, [2, [3, [4, 5]]]];
   console.log(arr);

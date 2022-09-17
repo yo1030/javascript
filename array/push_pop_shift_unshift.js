@@ -12,7 +12,6 @@ function getRandomInt(max) {
 var stack = [];
 var stack1 = [];
 var stack2 = [];
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const pushNum = ((num) => {
   stack.push(num);
 });
@@ -33,23 +32,19 @@ const pushLog = (() => {
   pushNum(randumInt);
   console.log(stack);
 });
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const pushArrLog = (() => {
   pushArr();
   console.log(stack);
 });
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const popLog = (() => {
   console.log(stack.pop());
   console.log(stack);
 });
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const unshiftLog = (() => {
   const randumInt = getRandomInt(9);
   unshiftNum(randumInt);
   console.log(stack1);
 });
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const unshiftLog2 = (() => {
   const randumInt = getRandomInt(9);
   const randumInt2 = getRandomInt(9);
@@ -57,7 +52,6 @@ const unshiftLog2 = (() => {
   unshiftTwoNum(randumInt, randumInt2);
   console.log(stack1);
 });
-/** https://honobonoengineer.com/js-push-pop-shift-unshift/ */
 const shiftLog = (() => {
   console.log(stack1.shift());
   console.log(stack1);

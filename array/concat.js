@@ -1,13 +1,11 @@
 const concatBtn = document.getElementById('concatBtn');
 const concatNestBtn = document.getElementById('concatNestBtn');
-/** https://honobonoengineer.com/js-concat/ */
 const concatLog = (() => {
   const arr = [1,"a",2];
   const arr1 = arr.concat([3,"b"]);
   console.log(arr);
   console.log(arr1);
 });
-/** https://honobonoengineer.com/js-concat/ */
 const concatNestLog = (() => {
   const arr = [1, 2, 3];
   const arr1 = arr.concat([4, 5], [6, 7]);

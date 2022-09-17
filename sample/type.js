@@ -1,7 +1,6 @@
 const typeOfBtn = document.getElementById('typeof');
 const objToStringBtn = document.getElementById('objToStringBtn');
 const isArrayBtn = document.getElementById('isArrayBtn');
-/** https://honobonoengineer.com/js-type/ */
 function typeofFunction() {
   typeofLog(undefined);
   typeofLog(null);

@@ -1,7 +1,6 @@
 const joinBtn = document.getElementById('joinBtn');
 const toStrBtn = document.getElementById('toStringBtn');
 const toLocaleStrBtn = document.getElementById('toLocaleStringBtn');
-/** https://honobonoengineer.com/convertarraytostring/ */
 const joinLog = (() => {
   const arr = makeArr(10);
   const result = arr.join();

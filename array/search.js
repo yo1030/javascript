@@ -5,7 +5,6 @@ const sortBtn = document.getElementById('sortBtn');
 const reverseBtn = document.getElementById('reverseBtn');
 
 /** indexOf, lastIndexOf, includes は文字列にも使えるメソッド */
-/** https://honobonoengineer.com/array-indexof-lastindexof/ */
 const idxOfLog = (() => {
   const arr = makeArr(5);
   const arr_ = arr.concat(makeArr(5).reverse());
@@ -17,7 +16,6 @@ const idxOfLog = (() => {
   console.log(`indexOfの結果2：${result2}`);
   console.log(`indexOfの結果3：${result3}：${arr_[result3]}`);
 });
-/** https://honobonoengineer.com/array-indexof-lastindexof/ */
 const lastIdxOfLog = (() => {
   const arr = makeArr(5);
   const arr_ = arr.concat(makeArr(5).reverse());
@@ -27,7 +25,6 @@ const lastIdxOfLog = (() => {
   console.log(`lastIndexOfの結果1：${result1}：${arr_[result1]}`);
   console.log(`lastIndexOfの結果2：${result2}`);
 });
-/**　https://honobonoengineer.com/js-array-includes/ */
 const includesLog = (() => {
   let arr = makeArr(5);
 
@@ -45,7 +42,6 @@ const includesLog = (() => {
   result = arr.includes(undefined);
   console.log(result);
 });
-/** https://honobonoengineer.com/array-sort/ */
 const sortLog = (() => {
   let arr1 = ["c","d","a","b","e"];
   let arr2 = [undefined,"c","a","b","d",undefined];
@@ -91,7 +87,6 @@ const sortLog = (() => {
   console.log(Arr2);
   console.log(Arr3);
 });
-/** https://honobonoengineer.com/array-reverse/ */
 const reverseLog = (() => {
   let arr = makeArr(10);
   let arr1 = makeArr(10);
