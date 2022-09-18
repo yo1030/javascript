@@ -1,4 +1,7 @@
 const argBtn = document.getElementById('argBtn');
+const propertyBtn = document.getElementById('propertyBtn');
+const closureBtn = document.getElementById('closureBtn');
+const counter2Btn = document.getElementById('counter2Btn');
 
 function omitParam( x, y) {
   if (y === undefined) y = 5;
@@ -35,4 +38,41 @@ function allFunction() {
   console.log(splitAssign({x:2, y:3}, 100));
 }
 
+function counter() {
+  console.log(++counter.count);
+}
+
+counter.count = 0;
+propertyBtn.addEventListener('click', counter);
+
+let counter_ = function() {
+  var count = 0;
+  return function() { return ++count; };
+}();
+
+// let counter2 = function() {
+//   var count = 0;
+//   const inc = () => ++count;
+//   const dec = () => --count;
+//   return {
+//     inc,
+//     dec
+//   }
+// }();
+
+let counter2 = function() {
+  var count = 0;
+  return {
+    inc: function() { return ++count;},
+    dec: function() { return --count;}
+  }
+}();
+
 argBtn.addEventListener('click', allFunction);
+closureBtn.addEventListener('click', function () {
+  console.log(counter_());
+  // console.log(count);
+});
+counter2Btn.addEventListener('click', function () {
+  console.log(counter2.inc());
+});
