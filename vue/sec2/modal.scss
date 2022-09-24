@@ -1,5 +1,5 @@
 .modal {
-  &__inner{
+  &_inner{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -13,7 +13,7 @@
       width: 100%;
     }
   }
-  &__close {
+  &_close {
     position: absolute;
     right: 0;
     top: 0;
@@ -27,7 +27,7 @@
       color: #333;  
     }
   }
-  &__background{
+  &_background{
     position: absolute;
     left: 0;
     top: 0;
