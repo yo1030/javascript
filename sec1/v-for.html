@@ -19,7 +19,7 @@
         {{idx}}:{{member}}
       </li>
     </ul>
-    <ul>
+    <!-- <ul>
       <li v-for="book in books">
         {{book}}
       </li>
@@ -33,7 +33,25 @@
       <li v-for="(book, key, idx) in books">
         {{idx}}:{{key}}:{{book}}
       </li>
-    </ul>
+    </ul> -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>title</th>
+          <th>author</th>
+          <th>content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="book in books" :key="book.id">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.contents }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <script>
     let app = new Vue({
@@ -41,11 +59,26 @@
       data(){
         return{
           members:['a', 'b', 'c', 'd', 'e'],
-          books:{
-            title: 'title_A',
-            author: 'author_A',
-            contents: 'content_A'
-          }
+          books:[
+            {
+              id: 1,
+              title: 'title_A',
+              author: 'author_A',
+              contents: 'content_A'
+            },
+            {
+              id: 2,
+              title: 'title_B',
+              author: 'author_B',
+              contents: 'content_B'
+            },
+            {
+              id: 3,
+              title: 'title_C',
+              author: 'author_C',
+              contents: 'content_C'
+            }
+          ]
         }
       }
     })
