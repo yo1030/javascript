@@ -34,10 +34,12 @@
         }
       },
       computed: {
-        totalPrice(){
-          console.log('computed----totalPrice');
-          return this.number * this.price;
-        }
+        // totalPrice(){
+        //   console.log('computed----totalPrice');
+        //   return this.number * this.price;
+        // }
+        /** app は vueインスタンスを入れている変数 */
+        totalPrice: app => app.number * app.price
       },
       watch: {}
     })
