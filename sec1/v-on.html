@@ -10,6 +10,7 @@
 <body>
   <div id="app">
     <button @click="btnClick($event,1)">vue click</button>
+    <button type="submit" @click.prevent.stop="submitBtn">submit</button>
   </div>
   <script>
     let app = new Vue({
@@ -24,6 +25,9 @@
           console.log(e);
           console.log(int);
           console.log('vueクリック');
+        },
+        submitBtn(){
+
         }
       }
     })
