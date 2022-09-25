@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel</title>
+  <link rel="stylesheet" href="carousel.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <section class="carousel">
+      <div class="carousel_main">
+        <transition name="active">
+          <div class="carousel_main"
+                  :key="images[active].id"
+                  v-show="active === images[active].id">
+            <img :src="images[active].img">
+          </div>
+        </transition>
+      </div>
+      <div @click="prev" class="carousel_prev"><i class="fas fa-angle-left fa-5x"></i></div>
+      <div @click="next" class="carousel_next"><i class="fas fa-angle-left fa-5x"></i></div>
+      <ul class="carousel_thumbnails">
+        <li v-for="image in images"
+            :key="image.id"
+            :class="{current:active === image.id}"
+            @click="current(image.id)">
+          <img :src="image.img" :alt="image.id">
+        </li>  
+      </ul>
+    </section>
+  </div>
+  <script>
+    let app = new Vue({
+      el:'#app',
+      data(){
+        return {
+          active: 0,
+          images: [
+            {id:0, img:'../image/image01.jpg'},
+            {id:1, img:'../image/image02.jpg'},
+            {id:2, img:'../image/image03.jpg'},
+            {id:3, img:'../image/image04.jpg'},
+            {id:4, img:'../image/image05.jpg'},
+            {id:5, img:'../image/image06.jpg'},
+            {id:6, img:'../image/image07.jpg'}
+          ]
+        }
+      },
+      methods: {
+        current(id){
+          this.active = id;
+        },
+        prev(){
+          if (this.active <= 0) {
+            this.active = this.images.length - 1;
+          } else {
+            this.active--;
+          }
+        },
+        next(){
+          const maxId = this.images.length - 1;
+          if (maxId <= this.active) {
+            this.active = 0;
+          } else {
+            this.active++;
+          }
+        }
+      },
+      mounted(){
+        let that = this;
+        setInterval(() => {
+          that.next();
+        }, 4000)
+      }
+    })
+  </script>
+</body>
+</html>
