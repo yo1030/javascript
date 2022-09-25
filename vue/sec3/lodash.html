@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodash</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    // window.addEventListener('resize', debounceResize);
+    // function resizeFunction() {
+    //   console.log(_);
+    //   console.log('debounceでresize');
+    // }
+    // function debounceResize(params) {
+    //   console.log(_.debounce);
+    //   _.debounce(resizeFunction, 3000);
+    // }
+    // window.addEventListener('resize', _.debounce(resizeFunction, 3000));
+    // function resizeFunction() {
+    //   console.log('debounceでresize')
+    // }
+    window.addEventListener('resize',
+     _.debounce(() => console.log('debounceでresize'), 3000));
+    window.addEventListener('resize',
+     _.throttle(() => console.log('throttleでresize'), 3000));
+  </script>
+</body>
+</html>
