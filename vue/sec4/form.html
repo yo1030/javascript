@@ -22,10 +22,13 @@
 </head>
 <body>
   <div id="app" class="parent">
-    <custom-input
+    <!-- <custom-input
       :value="parentValue"
       @input="parentValue = $event"
-      class="child"></custom-input>
+      class="child"></custom-input> -->
+      <custom-input
+        v-model="parentValue"
+        class="child"></custom-input>
       {{parentValue}}
   </div>
   <script>
