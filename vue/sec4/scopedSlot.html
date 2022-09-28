@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>emit</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <style>
+    .parent{
+      width: 800px;
+      margin: 0 auto;
+      border: 1px red solid;
+    }
+    .child{
+      width: 30%;
+      margin: 0 auto;
+      border: 1px blue solid;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="parent">
+    <!-- <my-com class="child">
+      {{member.name}}
+    </my-com> -->
+    <my-com class="child">
+      <template v-slot:default="player">
+        {{player}}
+        {{player.member_key.name}}
+      </template>
+    </my-com>
+  </div>
+  <script>
+    let myCom = {
+      template: `<div>
+        <slot :member_key="member">ここが差し変わる</slot>
+      </div>`,
+      data(){
+        return{
+          member:{
+            name:'堂安',
+            height:170,
+            hobby:'サッカー'
+          }
+        }
+      }
+    }
+    let app = new Vue({
+      el:'#app',
+      components: {
+        myCom
+      },
+      data(){
+        return {
+        }
+      }
+    })
+  </script>
+</body>
+</html>
