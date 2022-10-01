@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Base</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="getDogImage">Get Dog</button>
+    <img :src="dogImage" alt="dog image">
+    <input type="text" v-model="watchTest">
+  </div>
+  <script>
+    const url = 'https://dog.ceo/api/breeds/image/random';
+    const options = {
+      method: 'get'
+    }
+    let app = new Vue({
+      el:'#app',
+      data(){
+        return {
+          dogImage: '',
+          watchTest: ''
+        }
+      },
+      methods: {
+        async getDogImage(){
+          // json() はResponse インターフェイスに対して使用可能
+          const response = await fetch(url, options)
+            .then(response => response.json())
+          console.log(response);
+          this.dogImage = response.message
+        }
+      },
+      watch: {
+        watchTest() {
+          this.watchDogImage();
+        }
+      },
+      created() {
+        this.getDogImage();
+        this.watchDogImage = _.debounce(this.getDogImage, 1000);
+      }
+    })
+  </script>
+</body>
+</html>
