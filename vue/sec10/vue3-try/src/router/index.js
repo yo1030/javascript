@@ -1,6 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ChildrenView from '../views/ChildrenView.vue'
+import TeleportSample from "@/views/TeleportSample"
+import CompositionSample from "@/views/CompositionSample"
+import PropsEmit from "@/views/PropsEmit";
+import CompositionFunction from "@/views/CompositionFunction";
+import RouterSample from "@/views/RouterSample";
+import VuexSample from "@/views/VuexSample";
 
 const routes = [
   {
@@ -20,6 +26,36 @@ const routes = [
     path: '/children',
     name: 'children',
     component: ChildrenView
+  },
+  {
+    path: '/teleport-sample',
+    name: 'teleportSample',
+    component: TeleportSample
+  },
+  {
+    path: '/composition-sample',
+    name: 'compositionSample',
+    component: CompositionSample
+  },
+  {
+    path: '/props-emit',
+    name: 'propsEmit',
+    component: PropsEmit
+  },
+  {
+    path: '/composition-function',
+    name: 'compositionFunction',
+    component: CompositionFunction
+  },
+  {
+    path: '/router',
+    name: 'RouterSample',
+    component: RouterSample
+  },
+  {
+    path: '/vuex',
+    name: 'Vuex',
+    component: VuexSample
   }
 ]
 
